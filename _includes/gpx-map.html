@@ -1,0 +1,122 @@
+<section class="map-card">
+  {% if include.title %}
+    <h2>{{ include.title }}</h2>
+  {% endif %}
+  {% if include.description %}
+    <p>{{ include.description }}</p>
+  {% endif %}
+
+  <div class="route-stats" id="route-stats-{{ include.id | default: 'route' }}" aria-label="Route statistics">
+    <div class="route-stat">
+      <span class="route-stat-label">Distance</span>
+      <strong class="route-stat-value">Loading...</strong>
+    </div>
+    <div class="route-stat">
+      <span class="route-stat-label">Elevation gain</span>
+      <strong class="route-stat-value">Loading...</strong>
+    </div>
+    <div class="route-stat">
+      <span class="route-stat-label">Elevation loss</span>
+      <strong class="route-stat-value">Loading...</strong>
+    </div>
+  </div>
+
+  {% assign map_id = include.id | default: "route" %}
+  <div
+    id="gpx-map-{{ map_id }}"
+    class="gpx-map"
+    aria-label="{{ include.title | default: 'Interactive route map' }}"
+  ></div>
+
+  <p class="gpx-map-note">
+    Interactive route map powered by Leaflet.
+    <a href="{{ include.gpx | relative_url }}">Download the GPX file</a>.
+  </p>
+</section>
+
+<script>
+  window.addEventListener("load", function () {
+    var mapId = "gpx-map-{{ map_id }}";
+    var mapNode = document.getElementById(mapId);
+    var statsNode = document.getElementById("route-stats-{{ map_id }}");
+
+    if (!mapNode || typeof L === "undefined" || typeof L.GPX === "undefined") {
+      return;
+    }
+
+    var map = L.map(mapId, { scrollWheelZoom: false });
+
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    function setStats(distanceKm, gainM, lossM) {
+      if (!statsNode) {
+        return;
+      }
+
+      var values = statsNode.querySelectorAll(".route-stat-value");
+      if (values.length < 3) {
+        return;
+      }
+
+      values[0].textContent = distanceKm;
+      values[1].textContent = gainM;
+      values[2].textContent = lossM;
+    }
+
+    function formatKilometers(distanceMeters) {
+      return (distanceMeters / 1000).toFixed(1) + " km";
+    }
+
+    function formatMeters(valueMeters) {
+      return Math.round(valueMeters) + " m";
+    }
+
+    var gpxLayer = new L.GPX("{{ include.gpx | relative_url }}", {
+      async: true,
+      marker_options: {
+        startIconUrl: null,
+        endIconUrl: null,
+        shadowUrl: null,
+        wptIconUrls: {
+          "": "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png"
+        }
+      },
+      polyline_options: {
+        color: "#42d98a",
+        opacity: 0.92,
+        weight: 5,
+        lineCap: "round"
+      }
+    }).on("addpoint", function (event) {
+      if (event.point_type !== "waypoint" || !event.point || !event.element) {
+        return;
+      }
+
+      var nameNode = event.element.getElementsByTagName("name")[0];
+      var label = nameNode ? nameNode.textContent.trim() : "";
+
+      if (!label) {
+        return;
+      }
+
+      event.point.bindTooltip(label, {
+        permanent: true,
+        direction: "top",
+        offset: [0, -10],
+        className: "waypoint-label"
+      });
+
+      event.point.bindPopup("<strong>" + label + "</strong>");
+    }).on("loaded", function (event) {
+      map.fitBounds(event.target.getBounds(), { padding: [24, 24] });
+
+      setStats(
+        formatKilometers(event.target.get_distance()),
+        formatMeters(event.target.get_elevation_gain()),
+        formatMeters(event.target.get_elevation_loss())
+      );
+    }).addTo(map);
+  });
+</script>

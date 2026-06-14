@@ -261,6 +261,76 @@ h2 {
   border: 0;
 }
 
+.map-card {
+  margin: 28px 0;
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow);
+}
+
+.map-card p {
+  margin-top: 0;
+}
+
+.route-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 22px 0 18px;
+}
+
+.route-stat {
+  padding: 14px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface-strong);
+}
+
+.route-stat-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.route-stat-value {
+  color: var(--color-primary-dark);
+  font-size: 1.1rem;
+}
+
+.gpx-map {
+  min-height: 420px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.gpx-map-note {
+  margin: 14px 0 0;
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+.gpx-map-note a {
+  font-weight: 700;
+}
+
+.leaflet-tooltip.waypoint-label {
+  padding: 4px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  background: rgba(8, 13, 11, 0.88);
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
 @media (max-width: 640px) {
   .site-header {
     align-items: flex-start;
@@ -285,5 +355,13 @@ h2 {
 
   .feature-grid {
     grid-template-columns: 1fr;
+  }
+
+  .route-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .gpx-map {
+    min-height: 320px;
   }
 }
