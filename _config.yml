@@ -1,0 +1,37 @@
+title: KIWL
+description: Charity fundraising for Mirai no Mori
+url: ""
+baseurl: ""
+
+author:
+  name: KIWL
+
+theme: null
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+collections:
+  posts:
+    output: true
+
+permalink: /news/:year/:month/:day/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
