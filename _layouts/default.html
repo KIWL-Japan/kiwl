@@ -17,7 +17,7 @@
       </nav>
     </header>
 
-    <main class="page-content">
+    <main class="page-content{% if page.url == '/' %} page-content-home{% endif %}">
       {{ content }}
     </main>
 
