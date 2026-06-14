@@ -1,11 +1,11 @@
 ---
-title: GPX Routes
-permalink: /gpx-routes/
+title: GPX
+permalink: /gpx/
 layout: default
 has_gpx_map: true
 ---
 
-# GPX Routes
+# GPX
 
 This page collects interactive route maps for KIWL rides. These maps are loaded directly in the browser, so supporters and riders can zoom, pan, and explore the course without leaving the site.
 

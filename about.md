@@ -1,9 +1,9 @@
 ---
-title: About Us
+title: About
 permalink: /about/
 ---
 
-# About Us
+# About
 
 KIWL is a volunteer charity group committed to raising funds and awareness for Mirai no Mori.
 
