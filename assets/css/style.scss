@@ -334,20 +334,22 @@ h2 {
 
 .sponsor-logo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
   margin: 28px 0 8px;
 }
 
 .sponsor-logo-card {
   display: grid;
   place-items: center;
-  min-height: 112px;
-  padding: 18px;
+  aspect-ratio: 4 / 3;
+  min-height: 0;
+  padding: 16px;
   border: 1px solid var(--color-border);
   border-radius: 8px;
   background: #ffffff;
   box-shadow: var(--shadow);
+  overflow: hidden;
 }
 
 .sponsor-logo-card:hover {
@@ -356,8 +358,8 @@ h2 {
 
 .sponsor-logo-card img {
   width: 100%;
-  max-width: 170px;
-  max-height: 76px;
+  height: 76px;
+  max-width: 150px;
   object-fit: contain;
 }
 
@@ -393,5 +395,20 @@ h2 {
 
   .gpx-map {
     min-height: 320px;
+  }
+
+  .sponsor-logo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .sponsor-logo-card {
+    aspect-ratio: 1 / 1;
+    padding: 12px;
+  }
+
+  .sponsor-logo-card img {
+    height: 62px;
+    max-width: 118px;
   }
 }
