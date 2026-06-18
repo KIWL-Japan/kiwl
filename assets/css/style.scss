@@ -289,6 +289,15 @@ h2 {
   margin: 0 auto;
 }
 
+.history-hero-shell {
+  width: min(1080px, calc(100% - 32px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(260px, 0.9fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
 .history-hero-copy {
   padding: 44px;
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -297,6 +306,53 @@ h2 {
     linear-gradient(135deg, rgba(66, 217, 138, 0.14), rgba(255, 178, 63, 0.06)),
     rgba(17, 26, 22, 0.92);
   box-shadow: var(--shadow);
+}
+
+.history-crest-panel {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at top left, rgba(255, 178, 63, 0.18), transparent 46%),
+    linear-gradient(180deg, rgba(23, 35, 30, 0.96), rgba(10, 16, 13, 0.96));
+  box-shadow: var(--shadow);
+}
+
+.history-crest-frame {
+  position: relative;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 14px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(245, 247, 240, 0.95));
+  overflow: hidden;
+}
+
+.history-crest-frame::after {
+  content: "";
+  position: absolute;
+  inset: auto 14px 0;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.22);
+  filter: blur(16px);
+}
+
+.history-crest-frame img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: min(100%, 320px);
+  margin: 0 auto;
+}
+
+.history-crest-caption {
+  margin: 0;
+  color: #d6ded8;
+  font-size: 0.98rem;
 }
 
 .history-hero h1 {
@@ -725,8 +781,20 @@ h2 {
     padding-top: 40px;
   }
 
+  .history-hero-shell {
+    grid-template-columns: 1fr;
+  }
+
   .history-hero-copy {
     padding: 28px 22px;
+  }
+
+  .history-crest-panel {
+    padding: 18px;
+  }
+
+  .history-crest-frame {
+    padding: 14px;
   }
 
   .history-highlights,

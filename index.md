@@ -4,24 +4,33 @@ layout: default
 ---
 
 <section class="history-hero">
-  <div class="history-hero-copy">
-    <p class="eyebrow">About KIWL</p>
-    <h1>A brief history of KIWL volunteers</h1>
-    <p class="history-lede">From a small 2013 charity ride to a long-running volunteer effort, KIWL has turned endurance events into support for disadvantaged children in Japan.</p>
-    <div class="history-highlights">
-      <article class="history-highlight">
-        <span class="history-highlight-label">Founded</span>
-        <strong>2013</strong>
-      </article>
-      <article class="history-highlight">
-        <span class="history-highlight-label">Raised by Dec 2025</span>
-        <strong>¥187.46M</strong>
-      </article>
-      <article class="history-highlight">
-        <span class="history-highlight-label">Latest ride</span>
-        <strong>400km+ Noto loop in 2025</strong>
-      </article>
+  <div class="history-hero-shell">
+    <div class="history-hero-copy">
+      <p class="eyebrow">About KIWL</p>
+      <h1>A brief history of KIWL volunteers</h1>
+      <p class="history-lede">From a small 2013 charity ride to a long-running volunteer effort, KIWL has turned endurance events into support for disadvantaged children in Japan.</p>
+      <div class="history-highlights">
+        <article class="history-highlight">
+          <span class="history-highlight-label">Founded</span>
+          <strong>2013</strong>
+        </article>
+        <article class="history-highlight">
+          <span class="history-highlight-label">Raised by Dec 2025</span>
+          <strong>¥187.46M</strong>
+        </article>
+        <article class="history-highlight">
+          <span class="history-highlight-label">Latest ride</span>
+          <strong>400km+ Noto loop in 2025</strong>
+        </article>
+      </div>
     </div>
+
+    <aside class="history-crest-panel" aria-label="KIWL crest">
+      <div class="history-crest-frame">
+        <img src="{{ "/assets/images/kiwl-crest.jpg" | relative_url }}" alt="KIWL crest featuring a knight's helmet above a shield with four clasped hands" loading="lazy">
+      </div>
+      <p class="history-crest-caption">The KIWL crest adds a clear visual anchor to the homepage while reinforcing the volunteer spirit and solidarity behind the rides.</p>
+    </aside>
   </div>
 </section>
 
