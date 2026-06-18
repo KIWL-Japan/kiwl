@@ -29,7 +29,6 @@ layout: default
       <div class="history-crest-frame">
         <img src="{{ "/assets/images/kiwl-crest.jpg" | relative_url }}" alt="KIWL crest featuring a knight's helmet above a shield with four clasped hands" loading="lazy">
       </div>
-      <p class="history-crest-caption">The KIWL crest adds a clear visual anchor to the homepage while reinforcing the volunteer spirit and solidarity behind the rides.</p>
     </aside>
   </div>
 </section>
