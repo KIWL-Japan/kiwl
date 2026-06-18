@@ -26,7 +26,7 @@
       <nav class="site-nav" aria-label="Main navigation">
         <a href="{{ "/" | relative_url }}">Home</a>
         <details class="nav-dropdown">
-          <summary>Events</summary>
+          <summary><span>Events</span></summary>
           <div class="nav-dropdown-menu">
             <a href="{{ "/events/kiwl-classic-2027/" | relative_url }}">KIWL Classic 2027</a>
             <a href="{{ "/events/kiwl-lite-2026/" | relative_url }}">KIWL Lite 2026</a>
@@ -47,5 +47,27 @@
     <footer class="site-footer">
       <p>&copy; {{ "now" | date: "%Y" }} KIWL. Raising funds for Mirai no Mori.</p>
     </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var dropdowns = document.querySelectorAll(".nav-dropdown");
+
+        document.addEventListener("click", function (event) {
+          dropdowns.forEach(function (dropdown) {
+            if (dropdown.open && !dropdown.contains(event.target)) {
+              dropdown.open = false;
+            }
+          });
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") {
+            dropdowns.forEach(function (dropdown) {
+              dropdown.open = false;
+            });
+          }
+        });
+      });
+    </script>
   </body>
 </html>
