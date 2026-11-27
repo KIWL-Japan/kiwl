@@ -39,6 +39,8 @@ defaults:
       layout: default
 
 exclude:
+  - gpx-routes.md
+  - kiwl-26-day-1-route.md
   - KiWL_logo_2019_FINAL.ai
   - Gemfile
   - Gemfile.lock
