@@ -2,15 +2,15 @@
 ---
 
 :root {
-  --color-text: #f4f7f0;
-  --color-muted: #aab6ad;
-  --color-bg: #080d0b;
-  --color-surface: #111a16;
-  --color-surface-strong: #17231e;
-  --color-primary: #42d98a;
-  --color-primary-dark: #c8f7dc;
-  --color-accent: #ffb23f;
-  --color-border: #26352e;
+  --color-text: #faf4f4;
+  --color-muted: #b8abad;
+  --color-bg: #0d090a;
+  --color-surface: #1a1113;
+  --color-surface-strong: #23171a;
+  --color-primary: #ff5c64;
+  --color-primary-dark: #ffd0d3;
+  --color-accent: #ff5c64;
+  --color-border: #35262a;
   --shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
 }
 
@@ -21,8 +21,8 @@
 body {
   margin: 0;
   background:
-    radial-gradient(circle at 20% 0%, rgba(66, 217, 138, 0.12), transparent 30rem),
-    linear-gradient(180deg, #0b1310 0%, var(--color-bg) 34rem);
+    radial-gradient(circle at 20% 0%, rgba(255, 92, 100, 0.12), transparent 30rem),
+    linear-gradient(180deg, #130c0e 0%, var(--color-bg) 34rem);
   color: var(--color-text);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.6;
@@ -109,7 +109,7 @@ h2 {
   border: 2px solid var(--color-primary);
   border-radius: 6px;
   background: var(--color-primary);
-  color: #06100b;
+  color: #180608;
   font-weight: 750;
   text-decoration: none;
 }
@@ -124,8 +124,8 @@ h2 {
   display: grid;
   align-items: end;
   background:
-    linear-gradient(90deg, rgba(8, 13, 11, 0.94), rgba(8, 13, 11, 0.48) 48%, rgba(8, 13, 11, 0.18)),
-    linear-gradient(0deg, var(--color-bg), rgba(8, 13, 11, 0) 38%),
+    linear-gradient(90deg, rgba(13, 9, 10, 0.94), rgba(13, 9, 10, 0.48) 48%, rgba(13, 9, 10, 0.18)),
+    linear-gradient(0deg, var(--color-bg), rgba(13, 9, 10, 0) 38%),
     url("../images/kiwl-hero-road-cycling-japan.png") center / cover no-repeat;
 }
 
@@ -157,7 +157,7 @@ h2 {
 
 .hero-lede {
   max-width: 620px;
-  color: #d6ded8;
+  color: #ded6d8;
   font-size: 1.2rem;
 }
 
@@ -324,7 +324,7 @@ h2 {
   padding: 4px 8px;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 999px;
-  background: rgba(8, 13, 11, 0.88);
+  background: rgba(13, 9, 10, 0.88);
   color: #ffffff;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
   font-size: 0.78rem;
@@ -380,8 +380,8 @@ h2 {
   .hero {
     min-height: 680px;
     background:
-      linear-gradient(0deg, var(--color-bg), rgba(8, 13, 11, 0) 46%),
-      linear-gradient(90deg, rgba(8, 13, 11, 0.92), rgba(8, 13, 11, 0.4)),
+      linear-gradient(0deg, var(--color-bg), rgba(13, 9, 10, 0) 46%),
+      linear-gradient(90deg, rgba(13, 9, 10, 0.92), rgba(13, 9, 10, 0.4)),
       url("../images/kiwl-hero-road-cycling-japan.png") center / cover no-repeat;
   }
 
