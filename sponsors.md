@@ -17,7 +17,7 @@ Thanks to our generous sponsors, we have raised over ¥130 million since our hum
 
 ## Become a sponsor
 
-There are so many ways to sponsor, including a cash or prize donation and in-kind items, or just encouraging your staff to join our events to get fit and give back. Becoming a sponsor is easy, please contact Rob Williams, KIWL Chair & Co-Founder, [info@kiwl.net](mailto:info@kiwl.net?subject=Sponsor%20Inquiry) or visit our [Contact](/contact/) page and fill out the form.
+There are so many ways to sponsor, including a cash or prize donation and in-kind items, or just encouraging your staff to join our events to get fit and give back. Becoming a sponsor is easy, please contact Rob Williams, KIWL Chair & Co-Founder, [info@kiwl.net](mailto:info@kiwl.net?subject=Sponsor%20Inquiry) or visit our [Contact]({{ "/contact/" | relative_url }}) page and fill out the form.
 
 ## Our sponsors
 
