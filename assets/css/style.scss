@@ -75,6 +75,13 @@ a {
   gap: 16px;
 }
 
+.about-logo {
+  display: block;
+  width: clamp(110px, 24vw, 145px);
+  height: auto;
+  margin: 32px auto 0;
+}
+
 .site-nav a {
   color: var(--color-muted);
   font-weight: 650;
