@@ -16,10 +16,18 @@ plugins:
 collections:
   posts:
     output: true
+  events:
+    output: true
+    permalink: /events/:name/
 
 permalink: /news/:year/:month/:day/:title/
 
 defaults:
+  - scope:
+      path: ""
+      type: "events"
+    values:
+      layout: event
   - scope:
       path: ""
       type: "posts"
