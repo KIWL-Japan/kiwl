@@ -31,6 +31,7 @@ defaults:
       layout: default
 
 exclude:
+  - KiWL_logo_2019_FINAL.ai
   - Gemfile
   - Gemfile.lock
   - README.md

@@ -52,10 +52,21 @@ a {
 }
 
 .site-title {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 12px;
   color: #ffffff;
   font-size: 1.35rem;
   font-weight: 800;
   text-decoration: none;
+}
+
+.site-logo {
+  display: block;
+  width: auto;
+  height: clamp(40px, 6vw, 56px);
+  object-fit: contain;
 }
 
 .site-nav {
