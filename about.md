@@ -19,4 +19,4 @@ Our community supports Mirai no Mori through cycling challenges, running events,
 
 Mirai no Mori creates outdoor learning opportunities for children in Japan. Its programs help participants discover new strengths, form positive relationships, and experience nature in a supportive environment.
 
-<img class="about-logo" src="{{ '/assets/images/kiwl-logo.png' | relative_url }}" alt="KIWL — Knights in White Lycra crest" width="145" height="168">
+<img class="about-photo" src="{{ '/assets/images/kiwl-group.webp' | relative_url }}" alt="KIWL cyclists posing together with a sponsor banner outside a traditional Japanese building" width="1720" height="1290" loading="lazy" decoding="async">
